@@ -98,14 +98,17 @@ const parser = yargs(process.argv.slice(2))
             case 1:
                 await tapo.setColour(deviceToken, "#ffffff");
                 await tapo.setBrightness(deviceToken, 100);
+                console.log(chalk.green.bold("Profile 1 set"));
                 break;
             case 2:
                 await tapo.setColour(deviceToken, "#ffffff");
                 await tapo.setBrightness(deviceToken, 50);
+                console.log(chalk.green.bold("Profile 2 set"));
                 break;
             case 3:
                 await tapo.setColour(deviceToken, "#ffffff");
                 await tapo.setBrightness(deviceToken, 25);
+                console.log(chalk.green.bold("Profile 3 set"));
                 break;
         }
         return;

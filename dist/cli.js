@@ -127,14 +127,17 @@ const parser = (0, yargs_1.default)(process.argv.slice(2))
             case 1:
                 yield tapo.setColour(deviceToken, "#ffffff");
                 yield tapo.setBrightness(deviceToken, 100);
+                console.log(chalk_1.default.green.bold("Profile 1 set"));
                 break;
             case 2:
                 yield tapo.setColour(deviceToken, "#ffffff");
                 yield tapo.setBrightness(deviceToken, 50);
+                console.log(chalk_1.default.green.bold("Profile 2 set"));
                 break;
             case 3:
                 yield tapo.setColour(deviceToken, "#ffffff");
                 yield tapo.setBrightness(deviceToken, 25);
+                console.log(chalk_1.default.green.bold("Profile 3 set"));
                 break;
         }
         return;
