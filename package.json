@@ -1,0 +1,31 @@
+{
+  "name": "tapo-cli",
+  "version": "2.0.0",
+  "description": "",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "start:ts": "ts-node src/cli.ts",
+    "start:js": "node dist/cli.js",
+    "deploy": "sudo npm i -g"
+  },
+  "bin": {
+    "tapo": "./dist/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^16.11.11",
+    "@types/yargs": "^17.0.7",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "tp-link-tapo-connect": "^1.0.6",
+    "yargs": "^17.3.0"
+  }
+}
