@@ -36,7 +36,7 @@ const tapo = __importStar(require("tp-link-tapo-connect"));
 const yargs_1 = __importDefault(require("yargs/yargs"));
 const chalk_1 = __importDefault(require("chalk"));
 const dotenv = __importStar(require("dotenv"));
-dotenv.config();
+dotenv.config({ path: __dirname + "/../.env" });
 const parser = (0, yargs_1.default)(process.argv.slice(2))
     .usage("Usage: $0 <options>")
     .options({

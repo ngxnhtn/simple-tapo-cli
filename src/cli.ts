@@ -3,7 +3,7 @@ import * as tapo from "tp-link-tapo-connect";
 import yargs from "yargs/yargs";
 import chalk from "chalk";
 import * as dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: __dirname + "/../.env" });
 
 const parser = yargs(process.argv.slice(2))
     .usage("Usage: $0 <options>")
