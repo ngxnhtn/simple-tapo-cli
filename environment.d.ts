@@ -3,7 +3,6 @@ declare global {
         interface ProcessEnv {
             MAIL: string;
             PASS: string;
-            HOST: string;
         }
     }
 }

@@ -1,31 +1,33 @@
 {
   "name": "tapo-cli",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
-  "main": "dist/cli.js",
+  "bin": "./dist/index.js",
   "scripts": {
+    "build:watch": "tsc --watch",
     "build": "tsc",
-    "build:watch": "tsc -w",
-    "start:ts": "ts-node src/cli.ts",
-    "start:js": "node dist/cli.js",
-    "deploy": "sudo npm i -g"
-  },
-  "bin": {
-    "tapo": "./dist/cli.js"
+    "start": "node ./dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "deploy:local": "rm -rf ./dist && tsc && sudo npm un tapo -g && sudo npm i -g ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/node": "^16.11.11",
-    "@types/yargs": "^17.0.7",
-    "typescript": "^4.5.2"
-  },
   "dependencies": {
+    "@types/yargs": "^17.0.7",
     "chalk": "^4.1.2",
+    "color-convert": "^2.0.1",
     "dotenv": "^10.0.0",
     "tp-link-tapo-connect": "^1.0.6",
     "yargs": "^17.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.13",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "typescript": "^4.5.4"
   }
 }
