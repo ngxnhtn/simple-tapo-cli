@@ -96,7 +96,8 @@ import {
       ip: deviceData.deviceInfo.ip,
       onTime: deviceData.deviceInfo.on_time,  
     });
-    console.table(deviceData.deviceInfo.default_states);
+    const tmp:any = deviceData.deviceInfo;
+    console.table(tmp.default_states);
   }
 
   if (argv.clearCache) {

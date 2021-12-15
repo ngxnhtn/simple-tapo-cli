@@ -2,13 +2,15 @@
   "name": "tapo-cli",
   "version": "3.0.0",
   "description": "",
-  "bin": "./dist/index.js",
+  "bin": {
+    "tapo": "./dist/index.js"
+  },
   "scripts": {
     "build:watch": "tsc --watch",
     "build": "tsc",
     "start": "node ./dist/index.js",
     "lint": "eslint . --ext .ts",
-    "deploy:local": "rm -rf ./dist && tsc && sudo npm un tapo -g && sudo npm i -g ."
+    "deploy:local": "rm -rf ./dist && tsc && sudo npm un tapo-cli -g && sudo npm i -g . --force"
   },
   "keywords": [],
   "author": "",
