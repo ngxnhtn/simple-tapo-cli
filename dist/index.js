@@ -132,10 +132,12 @@ var cache_1 = require("./cache");
                 return [4 /*yield*/, tapo.setColour(deviceData.deviceKey, "#".concat(color_convert_1.default.rgb.hex(r, g, b)))];
             case 13:
                 _c.sent();
+                console.log(chalk_1.default.green("Color is set to ") + chalk_1.default.yellow(argv.color));
                 return [3 /*break*/, 16];
             case 14: return [4 /*yield*/, tapo.setColour(deviceData.deviceKey, "#".concat(color_convert_1.default.keyword.hex(argv.color)))];
             case 15:
                 _c.sent();
+                console.log(chalk_1.default.green("Color is set to ") + chalk_1.default.yellow(argv.color));
                 _c.label = 16;
             case 16: return [3 /*break*/, 18];
             case 17:

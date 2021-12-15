@@ -59,8 +59,10 @@ import {
         } else if (/^[0-256]-[0-256]-[0-256]$/ig.test(argv.color)) {
           const [r, g, b] = argv.color.split('-').map(x => parseInt(x));
           await tapo.setColour(deviceData.deviceKey, `#${convert.rgb.hex(r, g, b)}`);
+          console.log(chalk.green("Color is set to ") + chalk.yellow(argv.color));
         } else {
           await tapo.setColour(deviceData.deviceKey, `#${convert.keyword.hex(argv.color)}`);
+          console.log(chalk.green("Color is set to ") + chalk.yellow(argv.color));
         }
       } catch (error) {
         console.log(chalk.red(`Invalid color: ${argv.color}`));
